@@ -1,7 +1,7 @@
 import {Logger, Module, OnApplicationBootstrap, OnApplicationShutdown} from "@nestjs/common";
 
 
-const mainLogger = new Logger('Main')
+const mainLogger = new Logger('AppModule')
 
 @Module({
     imports: [],
