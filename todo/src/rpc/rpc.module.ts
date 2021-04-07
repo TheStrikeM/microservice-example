@@ -4,8 +4,7 @@ import {RpcController} from "./rpc.controller";
 import {RpcService} from "./rpc.service";
 
 @Module({
-    imports: [ConfigModule.forRoot()],
-    providers: [RpcController],
-    controllers: [RpcService],
+    providers: [RpcService],
+    controllers: [RpcController],
 })
 export class RpcModule {}
