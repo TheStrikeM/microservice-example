@@ -14,7 +14,7 @@ export class AppService {
     ) {}
 
     @Interval(1000)
-    async manageItem(): Promise<void> {
+    public async manageItem(): Promise<void> {
         try {
             const client = this.redisService.getClient()
 
@@ -28,7 +28,7 @@ export class AppService {
         }
     }
 
-    private _sendMail({ email, code }: SendDto): void {
+    protected _sendMail({ email, code }: SendDto): void {
         const result = `Code: ${code}, To Email: ${email}, `
         this.mailerService.sendMail({
             to: email,

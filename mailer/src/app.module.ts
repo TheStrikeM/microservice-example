@@ -3,6 +3,7 @@ import {PugAdapter} from "@nestjs-modules/mailer/dist/adapters/pug.adapter";
 import {MailerModule} from "@nestjs-modules/mailer";
 import {RedisModule} from "nestjs-redis";
 import {ScheduleModule} from "@nestjs/schedule";
+import {AppService} from "./app.service";
 
 @Module({
     imports: [
@@ -24,6 +25,6 @@ import {ScheduleModule} from "@nestjs/schedule";
         }),
         ScheduleModule.forRoot()
     ],
-    providers: []
+    providers: [AppService]
 })
 export class AppModule {}
