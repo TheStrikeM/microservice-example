@@ -9,7 +9,7 @@ const mainLogger = new Logger('Main')
     controllers: [],
     exports: []
 })
-export default class AppModule implements OnApplicationBootstrap, OnApplicationShutdown {
+export class AppModule implements OnApplicationBootstrap, OnApplicationShutdown {
     onApplicationBootstrap(): void {
         mainLogger.log(`Server has success started!`)
     }
