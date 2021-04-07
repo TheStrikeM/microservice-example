@@ -1,13 +1,12 @@
 import {Logger, Module, OnApplicationBootstrap, OnApplicationShutdown} from "@nestjs/common";
+import {ConfigModule} from "@nestjs/config";
+import {RpcModule} from "./rpc/rpc.module";
 
 
 const mainLogger = new Logger('AppModule')
 
 @Module({
-    imports: [],
-    providers: [],
-    controllers: [],
-    exports: []
+    imports: [RpcModule],
 })
 export class AppModule implements OnApplicationBootstrap, OnApplicationShutdown {
     onApplicationBootstrap(): void {
